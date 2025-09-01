@@ -1,0 +1,247 @@
+/* Importação da fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f9fc;
+    color: #444;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*Menu de navegação*/
+
+.main-header {
+    background-color: bisque;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px #444;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: chocolate;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: rgb(160, 96, 11);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: brown;
+}
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(158, 64, 1);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px black;
+
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(160, 96, 11);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: backgroud-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgb(197, 122, 36);
+    transform: translateY(-3px);
+}
+
+.content-section {
+    padding: 80px 0;
+    text-align: center;
+}
+ 
+.content-section:nth-child(even) {
+    background-color: #fcfcfc;
+}
+ 
+.content-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #ff6f61;
+}
+ .service-grid,
+ .products-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+ }
+
+ .service-card,
+ .products-card{
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgb(160, 96, 11);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+  .service-card:hover,
+  .products-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgb(160, 96, 11);
+ }
+
+  .service-card h3,
+ .products-card h3 {
+    color: chocolate;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+ }
+
+ .products-card img{
+    width: 30%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+ }
+
+ .main-footer{
+    text-align: center;
+    padding: 20px 0;
+    background-color: bisque;
+    font-size: 0.9rem;
+ }
+ 
+ /*Responsividade*/
+ /*Telas menores que 768px (para tablets)*/
+
+ @media(max-width: 768px){
+    .main-nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul{
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li{
+        margin: 0 10px 10px;
+    }
+
+    .hero-section h2{
+        font-size: 2.5rem;
+    }
+    .hero-section p{
+        font-size: 1rem;
+    }
+    .service-grid,
+    .products-gride{
+        grid-template-columns: 1fr;
+    }
+    .service-card,
+    .products-card{
+        padding: 20px;
+    }
+ }
+
+ /*Telas menores 480px (para celulares)*/
+
+ @media (max-width: 480px){
+    .main-header{
+        padding: 0.5rem;
+    }
+
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .main-nav ul{
+        flex-direction: column;
+    }
+
+    .main-nav ul li{
+        margin: 5px 0;
+    }
+
+    .hero-section{
+        padding: 100px 0;
+    }
+
+    .hero-section h2{
+        font-size: 2rem;
+    }
+
+    .cta-button{
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .content-section{
+        padding: 60px 0;
+    }
+ }
