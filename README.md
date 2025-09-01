@@ -1,7 +1,7 @@
 
 
 Pet Shop B&B
-Este é o site do Pet Shop B&B, um projeto focado em demonstrar o uso de HTML5 e CSS3 para criar uma página web responsiva.
+Este é projeto do site fictício de uma Pet Shop, um projeto focado em demonstrar o uso de HTML5 e CSS3 para criar uma página web responsiva.
 
 💻 Tecnologias
 HTML5: Estrutura e conteúdo.
